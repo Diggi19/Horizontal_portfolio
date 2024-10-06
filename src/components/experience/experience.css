@@ -2,16 +2,90 @@
     min-width: 70vw;
     height: 100vh;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.exp-content-holder{
+  width: 900px;
+  height: 300px;
+  /* content alignment */
+  margin-top: -8em;
+  /* element styles */
+  color: black;
 
+  /* alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.exp-content-holder>h2{
+  font-size: 5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0px;
+  color:  rgb(93, 93, 93);
+}
+.exp-content-holder>p{
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+  margin-bottom: 0px;
+}
+
+.exp-main-container>button{
+  padding: 15px 20px; 
+  margin-top: .5em;             
+  background-color: white;         
+  border: 2px solid orange;        
+  border-radius: 8px;              
+  color: orange;                   
+  font-size: 16px;                 
+  cursor: pointer;                 
+  transition: 
+    background-color 0.3s ease, 
+    color 0.3s ease, 
+    box-shadow 0.3s ease, 
+    transform 0.3s ease; 
+}
+.exp-main-container>button:hover{
+  background:linear-gradient(90deg, #ff6a00, #ee0979);        
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
 /* mobile view */
 @media (max-width: 768px) {
     .exp-main-container {
-      min-width: 700px;
+      min-width: 400px;
       height: auto; /* Allow the height to adjust based on content */
       padding: 10px;
       background-color: white; /* Example change for mobile */
+    }
+
+    .exp-content-holder{
+      width: 350px;
+      height: auto;
+      margin-top: -4em;
+      margin-bottom: 1em;
+    }
+    .exp-content-holder>h2{
+      font-size: 3rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      margin-bottom: 0px;
+      color: rgb(79, 77, 77);
+    }
+    .exp-content-holder>p{
+      font-size: 1.1rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: lighter;
+      margin-bottom: 0px;
+      margin-top: .5em;
     }
 }
   
