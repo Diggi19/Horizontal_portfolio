@@ -2,16 +2,120 @@
     min-width: 70vw;
     height: 100vh;
     background-color: white;
+    padding: 0em;
+
+
+    /* alignment if items */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.title-content-holder{
+  width: auto;
+  height: 400px;
+  /* content alignment */
+  margin-left: 3em;
+  margin-top: 2em;
+  /* element styles */
+  color: rgb(30, 30, 30);
+
+  /* alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+
+.title-content-holder>h1{
+  font-size: 7rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0px;
+  
+  /* Add lively gradient color to the text */
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make the gradient visible */
+  
+  /* Add shadow to make the text pop */
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.title-content-holder>h3{
+  font-size: 2rem;
+  font-family: poppins;
+  font-weight: 600;
+
+  /* spackings */
+  margin: -.8em 0em 0em 5.5em;
+}
+
+.title-btn-line-holder>button{
+  padding: 15px 20px; 
+  margin-top: .5em;             
+  background-color: white;         
+  border: 2px solid orange;        
+  border-radius: 8px;              
+  color: orange;                   
+  font-size: 16px;                 
+  cursor: pointer;                 
+  transition: 
+    background-color 0.3s ease, 
+    color 0.3s ease, 
+    box-shadow 0.3s ease, 
+    transform 0.3s ease; 
+}
+.title-btn-line-holder>button:hover{
+  background:linear-gradient(90deg, #ff6a00, #ee0979);        
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 
 /* mobile */
 @media (max-width: 768px) {
     .title-main-container {
-      min-width: 900px;
+      min-width: 700px;
       height: auto; /* Allow the height to adjust based on content */
       padding: 10px;
       background-color: white; /* Example change for mobile */
     }
+
+    .title-content-holder{
+      width: 300px;
+      align-items: start;
+      justify-content: start;
+      margin-left: 1em;
+    }
+    
+    .title-content-holder>h1{
+      font-size: 5rem;
+    }
+    .title-btn-line-holder{
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .title-btn-line-holder>button{
+      width: 300px;
+    }
+    .title-long-line{
+      width: 400px;
+      height: 1px;
+      margin-left: 0em;
+      margin-top: 1em;
+      background-color: orange;
+    }
+    
 }
   
+
+
+
+
+
+/* animations */
