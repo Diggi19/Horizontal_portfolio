@@ -1,0 +1,17 @@
+.project-main-container{
+    min-width: 50vw;
+    height: 100vh;
+    background-color: lightgray;
+}
+
+
+/* mobile view */
+@media (max-width: 768px) {
+    .project-main-container {
+      min-width: 600px;
+      height: auto; /* Allow the height to adjust based on content */
+      padding: 10px;
+      background-color: lightgray; /* Example change for mobile */
+    }
+}
+  

@@ -1,0 +1,19 @@
+
+.skills-main-container{
+    min-width: 150vw;
+    height: 100vh;
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+
+/* mobile view */
+@media (max-width: 768px) {
+    .skills-main-container {
+      min-width: 1500px;
+      height: auto; /* Allow the height to adjust based on content */
+      padding: 10px;
+      background-color: rgb(30, 30, 30); /* Example change for mobile */
+    }
+}
+  

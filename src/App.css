@@ -1,0 +1,24 @@
+body{
+  margin: 0em;
+  padding: 0em;
+  font-family: poppins;
+}
+
+.app-main-container{
+  width: auto;
+  height: 100vh;
+
+  /* display */
+  display: flex;
+  flex-direction: row;
+
+  /* scrolling */
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+.app-main-container::-webkit-scrollbar{
+  display: none;
+}
+
+

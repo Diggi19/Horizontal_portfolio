@@ -1,0 +1,19 @@
+
+.contact-main-container{
+    min-width: 30vw;
+    height: 100vh;
+    background-color: white;
+    color: black;
+}
+
+
+/* mobile view */
+@media (max-width: 768px) {
+    .contact-main-container {
+      min-width: 340px;
+      height: auto; /* Allow the height to adjust based on content */
+      padding: 10px;
+      background-color: white; /* Example change for mobile */
+    }
+}
+  

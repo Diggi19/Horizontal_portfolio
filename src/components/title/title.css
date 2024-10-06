@@ -1,0 +1,17 @@
+.title-main-container{
+    min-width: 70vw;
+    height: 100vh;
+    background-color: white;
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+    .title-main-container {
+      min-width: 900px;
+      height: auto; /* Allow the height to adjust based on content */
+      padding: 10px;
+      background-color: white; /* Example change for mobile */
+    }
+}
+  
