@@ -3,7 +3,17 @@ import './project.css'
 const Projects = () => {
   return (
     <div className='project-main-container'>
-        Projects
+        <div className='project-content-holder'>
+          <div className='project-intro-text'>
+            <h3>Check Out My Projects</h3>
+            <p>View Projects</p>
+            <div className='project-link-underline'></div>
+          </div>
+          <div className='project-general-image'>
+            
+          </div>
+
+        </div>
     </div>
   )
 }

@@ -1,17 +1,69 @@
 .project-main-container{
-    min-width: 50vw;
+    min-width: 60vw;
     height: 100vh;
-    background-color: lightgray;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.project-content-holder{
+  width: 100%;
+  /* content alignment */
+  margin-top: -7em;
+  margin-left: 6em;
+  /* alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-intro-text{
+  width: 30%;
+}
+.project-intro-text>h3{
+  font-size: 5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0px;
+  color:  rgb(93, 93, 93);
+}
+.project-intro-text > p {
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  cursor: pointer; /* Optional: pointer cursor for interaction on the text */
+}
 
+.project-link-underline {
+  width: 0px; /* Initially hidden */
+  height: 1px;
+  background-color: black;
+  margin-top: 0.5em;
+  transition: width 0.3s ease-in-out; 
+}
+.project-intro-text > p:hover + .project-link-underline {
+  width: 200px; 
+}
+.project-general-image{
+  width: 70%;
+}
 /* mobile view */
 @media (max-width: 768px) {
     .project-main-container {
       min-width: 600px;
       height: auto; /* Allow the height to adjust based on content */
       padding: 10px;
-      background-color: lightgray; /* Example change for mobile */
+      background-color: white; /* Example change for mobile */
     }
 }
   
+
+@keyframes extend-line{
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 200px;
+  }
+}
