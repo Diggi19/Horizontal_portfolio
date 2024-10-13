@@ -1,0 +1,160 @@
+.singleproject-main-container {
+    min-width: 30vw;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -2em;
+  }
+  
+  .singleproject {
+    width: 100%;
+    height: 100%;
+    max-width: 28rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.221), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .singleproject:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .singleproject-content-container {
+    padding: 1.5rem;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: none;
+  }
+  
+  .singleproject.hovered .singleproject-content-container {
+    color: white;
+  }
+  
+  .singleproject-number {
+    width: 100%;
+    font-family: 'Poppins', sans-serif; /* Added font family */
+    font-size: 4rem; /* Increased font size */
+    font-weight: bold;
+    /* margin-bottom: 1rem; */
+    text-align: left; /* Changed alignment to left */
+    
+    /* alignment */
+    margin: 0em;
+    cursor: none;
+  }
+  
+  .singleproject-name {
+    font-family: 'Poppins', sans-serif; /* Added font family */
+    font-size: 2.5rem; /* Increased font size */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: left; /* Changed alignment to left */
+    
+    /* alignments */
+    margin: 0em;
+    cursor: none;
+  }
+  
+  .singleproject-details {
+    transition: all 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    /* alignment */
+    margin: 0em;
+    margin-left: -.5em;
+    /* mouse */
+    cursor: none;
+  }
+  
+  .singleproject-details.visible {
+    /* width: 300px; */
+    max-height: 24rem;
+    opacity: 1;
+    margin-left: 1em;
+    margin-top: 1em;
+  }
+  
+  .singleproject-title {
+    width: 300px;
+    font-family: 'Poppins', sans-serif; /* Added font family */
+    font-size: 1.5rem; /* Increased font size */
+    
+    /* alignment */
+    margin: 0em;    
+}
+  
+  .singleproject-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .singleproject.hovered .singleproject-background {
+    opacity: 1;
+  }
+  
+  .singleproject-image {
+    transform: rotate(90deg);
+    height: 450px;
+    width: 820px;
+    object-fit: cover;
+    opacity: .3;
+  }
+  
+  @media (max-width: 640px) {
+    .singleproject-main-container {
+      min-width: 300px;
+      height: auto;
+      margin: 0em;
+    }
+    
+    .singleproject {
+      border-radius: 0px;
+    }
+    
+    .singleproject-number {
+      font-size: 2.5rem;
+      margin-left: 1em;
+    }
+    
+    .singleproject-name {
+      font-size: 1.5rem;
+      margin-left: 1.5em;
+    }
+    
+    .singleproject-title {
+        width: 280px;
+    }
+    .singleproject-details.visible {
+        max-height: 24rem;
+        opacity: 1;
+        margin-left: 2em;
+      }
+  }
+  

@@ -1,24 +1,28 @@
-body{
-  margin: 0em;
-  padding: 0em;
-  font-family: poppins;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.app-main-container{
-  width: auto;
+.app-main-container {
+  width: 100%; /* Ensure the container spans the full width */
   height: 100vh;
 
-  /* display */
+  /* Flex display to arrange items in a row */
   display: flex;
   flex-direction: row;
 
-  /* scrolling */
+  /* Enable horizontal scrolling */
   overflow-y: hidden;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-}
-.app-main-container::-webkit-scrollbar{
-  display: none;
+  overflow-x: auto; /* Allows for horizontal scrolling */
+
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
+.app-main-container > * {
+  min-width: 100vw; /* Each child will occupy the full viewport width */
+}
 
+.app-main-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for a cleaner look */
+}
