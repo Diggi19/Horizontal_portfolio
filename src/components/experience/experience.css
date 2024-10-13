@@ -20,11 +20,13 @@
   /* alignment */
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2em;
 }
 
 .exp-content-holder>h2{
+  text-align: center;
   font-size: 5rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -32,13 +34,14 @@
   color:  rgb(93, 93, 93);
 }
 .exp-content-holder>p{
-  font-size: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
   font-family: 'Poppins', sans-serif;
   font-weight: lighter;
   margin-bottom: 0px;
 }
 
-.exp-main-container>button{
+/* .exp-main-container>button{
   padding: 15px 20px; 
   margin-top: .5em;             
   background-color: white;         
@@ -57,6 +60,26 @@
   background:linear-gradient(90deg, #ff6a00, #ee0979);        
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+} */
+
+.exp-content-holder>button{
+  /* content styel */
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 16px;                 
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  /* alignment */
+  padding: 15px 20px; 
+  margin-top: .5em; }
+
+.exp-content-holder>button:hover{
+  background: linear-gradient(135deg, #333333, #000000);
+  color: white;
+  border-color: white;
   transform: scale(1.05);
 }
 /* mobile view */

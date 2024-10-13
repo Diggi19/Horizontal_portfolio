@@ -28,20 +28,21 @@
 }
 
 
-.title-content-holder>h1{
+.title-content-holder > h1 {
   font-size: 7rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin-bottom: 0px;
-  
-  /* Add lively gradient color to the text */
-  background: linear-gradient(90deg, #ff6a00, #ee0979);
+
+  /* Gradient effect with black and gray shades */
+  background: linear-gradient(90deg, #555555, #333333, #111111, #000000);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Make the gradient visible */
-  
-  /* Add shadow to make the text pop */
+  -webkit-text-fill-color: transparent;
+
+  /* Shadow to make the text pop */
   text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 
 .title-content-holder>h3{
   font-size: 2rem;
@@ -52,7 +53,7 @@
   margin: -.8em 0em 0em 5.5em;
 }
 
-.title-btn-line-holder>button{
+/* .title-btn-line-holder>button{
   padding: 15px 20px; 
   margin-top: .5em;             
   background-color: white;         
@@ -72,8 +73,31 @@
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
+} */
+
+
+/* black button */
+.title-btn-line-holder>button{
+  /* content styel */
+  padding: 15px 20px; 
+  margin-top: .5em; 
+  font-size: 16px; 
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  /* alignment */
 }
 
+.title-btn-line-holder>button:hover{
+  background: linear-gradient(135deg, #333333, #000000);
+  color: white;
+  border-color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 /* mobile */
 @media (max-width: 768px) {
@@ -108,7 +132,7 @@
       height: 1px;
       margin-left: 0em;
       margin-top: 1em;
-      background-color: orange;
+      background-color: black;
     }
     
 }

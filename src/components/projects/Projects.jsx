@@ -10,7 +10,6 @@ const Projects = () => {
             <div className='project-link-underline'></div>
           </div>
           <div className='project-general-image'>
-            
           </div>
 
         </div>

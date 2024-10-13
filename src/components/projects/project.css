@@ -45,9 +45,24 @@
 .project-intro-text > p:hover + .project-link-underline {
   width: 200px; 
 }
-.project-general-image{
-  width: 70%;
+.project-general-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Added padding to provide spacing around the content */
+  border-radius: 10px; /* Soft rounded corners for a cleaner look */
 }
+
+.project-general-image > img {
+  max-width: 100%; /* Ensures the image is responsive and scales according to the container */
+  max-height: 300px; /* Sets a maximum height to maintain a consistent look */
+  border-radius: 8px; /* Rounded corners for a smoother appearance */
+  object-fit: cover; /* Ensures the image scales proportionally without distortion */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+}
+
 /* mobile view */
 @media (max-width: 768px) {
     .project-main-container {
