@@ -56,6 +56,7 @@
   margin-top: 1em;
 }
 
+
 .moreproject-main-holder>button:hover{
   background: linear-gradient(135deg, #333333, #000000);
   color: white;
@@ -63,6 +64,18 @@
   transform: scale(1.05);
 }
 .moreproject-main-holder>button a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Black text */
+  font-weight: bold;
+}
+
+/* Change link color on button hover */
+.moreproject-main-holder > button:hover a {
+  color: white; /* Change link color to white on button hover */
+}
+
+/* Link styles */
+.moreproject-main-holder > button a {
   text-decoration: none; /* Remove underline */
   color: black; /* Black text */
   font-weight: bold;
