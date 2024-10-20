@@ -4,7 +4,7 @@ import './splashscreen.css';
 
 const SplashScreen = ({ onFinish }) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const words = ["Programmer", "Developer", "Traveller", "Let's Go!"];
+  const words = ["CREATOR", "DEVELOPER", "EXPLORER", "THAT'S ME! "];
 
   useEffect(() => {
     if (currentWordIndex < words.length - 1) {

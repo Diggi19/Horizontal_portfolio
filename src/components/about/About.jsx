@@ -9,10 +9,10 @@ const About = () => {
           <h2>About Me</h2>
           <span></span>
           <p>
-            Frontend Developer with 1.5 years of experience building scalable web applications using HTML, CSS,
-            JavaScript, and React.js. Skilled in collaborating with cross-functional teams in fast-paced environments to
-            deliver high-quality solutions. Proficient with build tools like Webpack and version control using Git. Strong
-            problem-solving skills and a passion for continuous learning and improvement.
+          I am a Full-Stack Developer with a passion for delivering scalable solutions and thriving in challenging environments. 
+          With experience in modern web technologies and cloud services, I focus on innovation, quality, and continuous improvement. 
+          I enjoy collaborating with cross-functional teams, always striving to meet expectations and grow my skills while staying updated 
+          with the latest technologies.
           </p>
 
         </div>

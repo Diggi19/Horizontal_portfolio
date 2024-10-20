@@ -85,12 +85,14 @@
   align-items: center;
   font-size: 1rem;
   font-weight: bold;
-  color: #555; /* Adjust color as necessary */
+  color: #fcaa3edd; /* Adjust color as necessary */
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
 .silver-dot:hover{
   color: white;
-  transform: rotate(-90deg) scale(1.2); 
+  transform: rotate(-90deg) scale(1.7);
+  z-index: 100; 
+  cursor: none;
 }
 
 /* mobile view */

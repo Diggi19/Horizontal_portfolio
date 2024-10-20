@@ -25,7 +25,7 @@ const LoadingSplash = ({ onFinish }) => {
             ease: "easeInOut"
           }}
         >
-          Just a moment please
+          Hang tight, we’re almost there!
         </motion.h1>
       </AnimatePresence>
     </div>

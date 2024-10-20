@@ -5,7 +5,7 @@ const MoreProjects = () => {
     <div className='moreproject-main-container'>
         <div className='moreproject-main-holder'>
             <h3>View Some More</h3>
-            <p>Check out my GitHub page for more amazing projects.</p>
+            <p>Feel free to explore my GitHub page for more of my projects.</p>
             <button>
                 <a className='moreproject-link' href="https://github.com/DigveshParab" target='_blank'>Let's Go!</a>
             </button>        

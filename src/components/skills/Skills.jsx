@@ -80,7 +80,7 @@ const Skills = () => {
         <div className='skill-intro-text'>
           <h3>My Arsenal</h3>
           <p>
-            I have an arsenal loaded with skills across various fields, including web development, frontend engineering, UI/UX design, and database management. Each skill enables me to craft efficient, user-friendly, and scalable solutions that bring ideas to life and tackle real-world challenges.
+            I have an arsenal loaded with skills across various fields. Each skill enables me to craft efficient, user-friendly, and scalable solutions that bring ideas to life and tackle real-world challenges.
           </p>
         </div>
         <div className='skill-list-holder'>
@@ -94,6 +94,7 @@ const Skills = () => {
                 key={skill.name}
                 src={skill.logo}
                 alt={skill.alt}
+                title={skill.name} // Adding tooltip using title attribute
                 className="skill-icon"
               />
             )
