@@ -156,5 +156,12 @@
         opacity: 1;
         margin-left: 2em;
       }
+
+    .singleproject-image {
+      height: 450px;
+      width: 920px;
+      object-fit: cover;
+      opacity: .3;
+    }
   }
   

@@ -1,5 +1,5 @@
 .project-main-container{
-    min-width: 60vw;
+    min-width: 40vw;
     height: 100vh;
     background-color: white;
     display: flex;
@@ -66,10 +66,19 @@
 /* mobile view */
 @media (max-width: 768px) {
     .project-main-container {
-      min-width: 600px;
+      min-width: 400px;
       height: auto; /* Allow the height to adjust based on content */
       padding: 10px;
       background-color: white; /* Example change for mobile */
+    }
+
+    .project-content-holder{
+     
+
+      margin-left: 2em;
+    }
+    .project-intro-text{
+      width: 40%;
     }
 }
   
