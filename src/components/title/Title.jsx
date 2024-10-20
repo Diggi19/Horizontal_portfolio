@@ -1,6 +1,10 @@
 import React from 'react'
 import './title.css'
-const Title = () => {
+const Title = (
+  {
+    startFunction
+  }
+) => {
 
   return (
     <div className='title-main-container'>
@@ -8,7 +12,7 @@ const Title = () => {
         <h1>Digvesh Parab</h1>
         {/* <h3>SOFTWARE DEVELOPER</h3> */}
         <div className='title-btn-line-holder'>
-          <button>LETS START !</button>
+          <button onClick={startFunction}>LETS START !</button>
           <div className='title-long-line'></div>
         </div>
       </div>

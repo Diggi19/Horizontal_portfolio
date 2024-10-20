@@ -87,7 +87,9 @@ useEffect(() => {
     }, 3000); // Show the splash for 3 seconds
   };
 
-  
+  const handleMoveToAbout = ()=>{
+    scrollContainerRef.current.scrollTo({ left: 870, behavior: 'smooth' });
+  }
   useEffect(() => {
     if (showSplash) {
       setTimeout(() => setShowSplash(false), 12000); // Hide splash after 3 seconds
@@ -131,7 +133,7 @@ useEffect(() => {
 
   return (
     <div className="app-main-container" ref={scrollContainerRef}>
-      <Title />
+      <Title startFunction={handleMoveToAbout}/>
       <About />
       <Experience setIsExperiencePageOpen={() => showSplashAndNavigateOpen(setIsExperiencePageOpen)} />
       <Projects setIsProjectPageOpen={() => showSplashAndNavigateOpen(setIsProjectPageOpen)} />
