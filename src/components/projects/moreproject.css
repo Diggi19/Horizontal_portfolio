@@ -22,7 +22,7 @@
 }
 .moreproject-main-holder>h3{
   /* font styles */
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color:    rgb(93, 93, 93);
@@ -32,7 +32,7 @@
 }
 
 .moreproject-main-holder>p{
-  width: 90%;
+  width: 80%;
   /* font styles */
   text-align: center;
   font-size: 1.1rem;

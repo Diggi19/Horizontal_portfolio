@@ -29,142 +29,37 @@ const App = () => {
 
 
 // Handle horizontal scroll as default behaviour
-// const horizontalScrollByDef = () => {
-//   const container = scrollContainerRef.current;
-//   let scrollTimeout;
-//   let lastScrollTime = 0;
-//   const scrollInterval = 20; // minimum time between scroll events
-//   let isTrackpad = false;
-//   let lastDeltaY = 0;
+const horizontalScrollByDef = () => {
+  const container = scrollContainerRef.current;
 
-//   const detectTrackpad = (event) => {
-//     // Check if the event is from a trackpad
-//     if (event.wheelDeltaY) {
-//       if (event.wheelDeltaY === (event.deltaY * -3)) {
-//         isTrackpad = true;
-//       }
-//     } else if (event.deltaMode === 0) {
-//       // Additional check for Firefox and other browsers
-//       if (Math.abs(event.deltaY) < 50) {
-//         isTrackpad = true;
-//       }
-//     }
-//   };
+  // Scroll horizontally on wheel event
+  const handleScroll = (event) => {
+    event.preventDefault();
+    container.scrollBy({
+      left: event.deltaY * 10.5, // Apply vertical scroll to horizontal
+      behavior: 'smooth'  // Enable smooth scrolling
+    });
+  };
 
-//   const handleScroll = (event) => {
-//     event.preventDefault();
+  // Add wheel event listener
+  if (container) {
+    container.addEventListener('wheel', handleScroll);
+  }
 
-//     const currentTime = new Date().getTime();
-//     const timeSinceLastScroll = currentTime - lastScrollTime;
-
-//     detectTrackpad(event);
-
-//     // Determine the scroll amount based on the input type
-//     let scrollAmount;
-//     if (isTrackpad) {
-//       // Trackpad scrolling
-//       scrollAmount = event.deltaY * 100; // Reduced multiplier for trackpads
-//     } else {
-//       // Mouse wheel scrolling
-//       scrollAmount = event.deltaY * 10;
-//     }
-
-//     // Smooth out sudden direction changes
-//     if (Math.sign(scrollAmount) !== Math.sign(lastDeltaY)) {
-//       scrollAmount = scrollAmount * 0.5;
-//     }
-//     lastDeltaY = scrollAmount;
-
-//     // Apply a non-linear transformation to make small scrolls more precise
-//     scrollAmount = Math.sign(scrollAmount) * Math.pow(Math.abs(scrollAmount), 1.3);
-
-//     // Throttle the scroll events
-//     if (timeSinceLastScroll > scrollInterval) {
-//       container.scrollBy({
-//         left: scrollAmount,
-//         behavior: 'smooth'
-//       });
-//       lastScrollTime = currentTime;
-//     } else {
-//       // If we're scrolling too fast, queue up a scroll for later
-//       clearTimeout(scrollTimeout);
-//       scrollTimeout = setTimeout(() => {
-//         container.scrollBy({
-//           left: scrollAmount,
-//           behavior: 'smooth'
-//         });
-//         lastScrollTime = new Date().getTime();
-//       }, scrollInterval - timeSinceLastScroll);
-//     }
-//   };
-
-//   // Add wheel event listener
-//   if (container) {
-//     container.addEventListener('wheel', handleScroll, { passive: false });
-//   }
-
-//   // Cleanup the event listener on component unmount
-//   return () => {
-//     if (container) {
-//       container.removeEventListener('wheel', handleScroll);
-//       clearTimeout(scrollTimeout);
-//     }
-//   };
-// };
-
-
-  useEffect(() => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-
-    let isTrackpad = false;
-    let lastScrollTop = 0;
-    let lastScrollLeft = 0;
-
-    const handleWheel = (e) => {
-      e.preventDefault();
-      
-      // Detect if the user is using a trackpad
-      if (Math.abs(e.deltaY) < 0) {
-        isTrackpad = true;
-      }
-
-      // Determine scroll direction and amount
-      const scrollAmount = isTrackpad ? e.deltaY * 10 : e.deltaY * 5;
-      
-      if (isTrackpad) {
-        // For trackpad: up gesture scrolls left, down gesture scrolls right
-        container.scrollLeft -= scrollAmount;
-      } else {
-        // For mouse: scroll down to go left, scroll up to go right
-        container.scrollLeft += scrollAmount;
-      }
-    };
-
-    const handleTouchMove = (e) => {
-      const touchDeltaX = lastScrollLeft - container.scrollLeft;
-      lastScrollLeft = container.scrollLeft;
-
-      // Smooth out the scrolling by applying a fraction of the movement
-      container.scrollLeft += touchDeltaX * 0.1;
-    };
-
-    container.addEventListener('wheel', handleWheel, { passive: false });
-    container.addEventListener('touchmove', handleTouchMove, { passive: false });
-
-    return () => {
-      container.removeEventListener('wheel', handleWheel);
-      container.removeEventListener('touchmove', handleTouchMove);
-    };
-  }, [showSplash,isExperiencePageOpen,isProjectPageOpen]);
+  // Cleanup the event listener on component unmount
+  return () => {
+    if (container) {
+      container.removeEventListener('wheel', handleScroll);
+    }
+  };
+}
 
 
 
 
-
-// useEffect(() => {
-//   horizontalScrollByDef();
-// }, [isExperiencePageOpen,isProjectPageOpen,showSplash,showLoadingSplash]);
+useEffect(() => {
+  horizontalScrollByDef();
+}, [isExperiencePageOpen,isProjectPageOpen,showSplash,showLoadingSplash]);
 
   // Show splash screen on page load and hide after animation
   const handleSplashFinish = () => {
