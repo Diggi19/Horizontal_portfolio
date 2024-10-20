@@ -21,6 +21,9 @@ body {
   overflow-y: hidden;
   overflow-x: auto;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; 
   
   /* Add fade-in animation */
   animation: fadeIn 1s ease-out;
