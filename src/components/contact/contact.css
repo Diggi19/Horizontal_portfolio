@@ -68,6 +68,18 @@
   font-weight: bold;
 }
 
+/* Change link color on button hover */
+.contact-main-holder > button:hover a {
+  color: white; /* Change link color to white on button hover */
+}
+
+/* Link styles */
+.contact-main-holder > button a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Black text */
+  font-weight: bold;
+}
+
 /* mobile view */
 @media (max-width: 768px) {
     .contact-main-container {
