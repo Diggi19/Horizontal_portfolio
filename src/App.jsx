@@ -14,6 +14,9 @@ import MoreProjects from './components/projects/MoreProjects';
 import gecisImg from './assets/projects/gecis.png';
 import netflixImg from './assets/projects/netflix.png';
 import whatsappImg from './assets/projects/whatsapp.png';
+import ExperienceIntro from './components/experience/ExperienceIntro';
+import ExperienceTimeline from './components/experience/ExperienceMap';
+import ResumeSection from './components/experience/ResumeSection';
 
 const projectData = [
   {
@@ -51,6 +54,8 @@ const projectData = [
 function App() {
   const [isLoadingScreenOn, setIsLoadingScreenOn] = useState(false);
   const [isProjectPageOpen, setIsProjectPageOpen] = useState(false);
+  const [isExperiencePageOpen, setIsExperiencePageOpen] = useState(true);
+
   const scrollContainerRef = useRef(null);
 
   // Handle horizontal scroll as default behaviour
@@ -84,11 +89,22 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (scrollContainerRef.current && isProjectPageOpen) {
+    if (scrollContainerRef.current && (isProjectPageOpen || isExperiencePageOpen)) {
       scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' }); // Reset horizontal scroll
     }
-  }, [isProjectPageOpen]);
+  }, [isProjectPageOpen,isExperiencePageOpen]);
   
+
+  if(isExperiencePageOpen){
+    return(
+      <div className='app-main-container' ref={scrollContainerRef}>
+        <ExperienceIntro setIsExperiencePageOpen={setIsExperiencePageOpen}/>
+        <ExperienceTimeline/>
+        <ResumeSection/>
+      </div>
+    )
+  }
+
 
   if (isProjectPageOpen) {
     return (
@@ -106,7 +122,7 @@ function App() {
     <div className='app-main-container' ref={scrollContainerRef}>
       <Title />
       <About />
-      <Experience />
+      <Experience setIsExperiencePageOpen={setIsExperiencePageOpen}/>
       <Projects setIsProjectPageOpen={setIsProjectPageOpen} />
       <Skills />
       <Contact />
@@ -121,8 +137,17 @@ export default App;
 
 
 
+// todo:
+/*
+* issue 1
+requirement : when ever a internal page is loaded or moving from internal to outer page provide a splash screen
+inorder to hide background tasks like reseting scrolling etc
 
 
+* issue 2
 
+the text color of button which are anchor tags is not changing to white when hovered
+- contact component
+- moreproject component
 
-
+*/

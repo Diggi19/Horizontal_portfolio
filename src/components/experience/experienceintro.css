@@ -1,0 +1,92 @@
+.experience-main-container{
+    min-width: 40vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-content-holder{
+  width: 100%;
+  /* content alignment */
+  margin-left: 6em;
+  /* alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.experience-intro-text{
+  width: 30%;
+}
+.experience-intro-text>h3{
+  font-size: 5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0px;
+  line-height: 70px;
+  color:  rgb(93, 93, 93);
+}
+.experience-intro-text > p {
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  cursor: pointer; /* Optional: pointer cursor for interaction on the text */
+}
+
+.experience-link-underline {
+  width: 0px; /* Initially hidden */
+  height: 1px;
+  background-color: black;
+  margin-top: 0.5em;
+  transition: width 0.3s ease-in-out; 
+}
+.experience-intro-text > p:hover + .experience-link-underline {
+  width: 200px; 
+}
+.experience-general-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Added padding to provide spacing around the content */
+  border-radius: 10px; /* Soft rounded corners for a cleaner look */
+}
+
+.experience-general-image > img {
+  max-width: 100%; /* Ensures the image is responsive and scales according to the container */
+  max-height: 300px; /* Sets a maximum height to maintain a consistent look */
+  border-radius: 8px; /* Rounded corners for a smoother appearance */
+  object-fit: cover; /* Ensures the image scales proportionally without distortion */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+}
+
+/* mobile view */
+@media (max-width: 768px) {
+    .experience-main-container {
+      min-width: 400px;
+      height: auto; /* Allow the height to adjust based on content */
+      padding: 10px;
+      background-color: white; /* Example change for mobile */
+    }
+    .experience-content-holder{
+        margin-left: 0em;
+    }
+    .experience-intro-text>h3{
+        font-size: 4rem;
+        line-height: 60px;
+    }
+
+}
+  
+
+@keyframes extend-line{
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 200px;
+  }
+}

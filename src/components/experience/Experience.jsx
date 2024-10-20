@@ -1,6 +1,13 @@
 import React from 'react'
 import './experience.css'
-const Experience = () => {
+const Experience = (
+  {
+    setIsExperiencePageOpen
+  }
+) => {
+
+  const handleExperiencePageOpen = ()=> setIsExperiencePageOpen(true)
+
   return (
     <div className='exp-main-container'>
         <div className='exp-content-holder'>
@@ -11,7 +18,7 @@ const Experience = () => {
             Every failure has made me wiser, every setback has taught me to rise stronger, and each success has fueled my ambition to aim higher.
           </p>
           
-          <button>Check Out!</button>
+          <button onClick={handleExperiencePageOpen}>Check Out!</button>
         </div>
 
     </div>

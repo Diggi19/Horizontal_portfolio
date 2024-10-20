@@ -1,0 +1,78 @@
+
+.resumesection-main-container{
+    min-width: 30vw;
+    height: 100vh;
+    /* container deco */
+    background-color: rgb(30, 30, 30);
+    color: white;
+    /* content align */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumesection-main-holder{
+  /* content align */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+.resumesection-main-holder>h3{
+  /* font styles */
+  font-size: 5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color:    rgb(93, 93, 93);
+  line-height: 70px;
+  /* alignmet */
+  margin-bottom: 0px;
+}
+
+.resumesection-main-holder>p{
+  width: 90%;
+  /* font styles */
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+  cursor: pointer;
+  /* alignment */
+  margin-bottom: 0px;
+}
+
+.resumesection-main-holder>button{
+  /* content styel */
+  background-color: rgb(30, 30, 30);
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  /* alignment */
+  margin-top: 1em;
+}
+
+.resumesection-main-holder>button:hover{
+  background: white;
+  color: black;
+  border-color: black;
+  transform: scale(1.05);
+}
+
+
+  
+
+/* mobile view */
+@media (max-width: 768px) {
+    .resumesection-main-container {
+      min-width: 340px;
+      height: auto; /* Allow the height to adjust based on content */
+      padding: 10px;
+      background-color: rgb(30, 30, 30); /* Example change for mobile */
+    }
+}
+  
