@@ -59,7 +59,7 @@ const horizontalScrollByDef = () => {
 
 useEffect(() => {
   horizontalScrollByDef();
-}, [isExperiencePageOpen,isProjectPageOpen]);
+}, [isExperiencePageOpen,isProjectPageOpen,showSplash,showLoadingSplash]);
 
   // Show splash screen on page load and hide after animation
   const handleSplashFinish = () => {
